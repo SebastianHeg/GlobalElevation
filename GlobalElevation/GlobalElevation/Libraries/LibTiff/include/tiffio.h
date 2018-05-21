@@ -107,16 +107,7 @@ typedef	uint32 toff_t;		/* file offset */
 #  if !defined(__CYGWIN) && !defined(AVOID_WIN32_FILEIO) && !defined(USE_WIN32_FILEIO)
 #    define AVOID_WIN32_FILEIO
 #  endif
-#  include <fcntl.h>
-#  include <io.h>
-#  ifdef SET_BINARY
-#    undef SET_BINARY
-#  endif /* SET_BINARY */
-#  define SET_BINARY(f) do {if (!_isatty(f)) _setmode(f,_O_BINARY);} while (0)
-#else /* Windows */
-#  define BINMODE
-#  define SET_BINARY(f) (void)0
-#endif /* Windows */
+#endif
 
 #if defined(USE_WIN32_FILEIO)
 # define VC_EXTRALEAN

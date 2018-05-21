@@ -1,12 +1,17 @@
 #include "ReadTiffFile.hpp"
-#include "Libraries/LibTiff/include/tiffio.h"
 
 
 ReadTiffFile::ReadTiffFile()
 {
-
 }
 
 ReadTiffFile::~ReadTiffFile()
 {
+}
+
+void ReadTiffFile::readFile(const char* path)
+{
+	TIFF* tif = TIFFOpen(path, "r");
+
+	TIFFClose(tif);
 }
