@@ -1,12 +1,10 @@
-#include "ReadTiffFile.hpp"
+#include "Libraries/LibTiff/include/tiffio.h"
 
 #include <iostream>
 
 
-int main(int argc, char* argv[]) {
-	ReadTiffFile readTifFile;
-	readTifFile.readFile("Test.tif");
+int main()
+{
 
-	getchar();
 	return 0;
 }
