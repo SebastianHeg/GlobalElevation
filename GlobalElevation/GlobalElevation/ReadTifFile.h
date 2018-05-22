@@ -1,5 +1,7 @@
 #pragma once
+#include "Libraries/LibTiff/include/tiffio.h"
 
+#include <iostream>
 
 
 class ReadTifFile

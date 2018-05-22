@@ -1,8 +1,5 @@
 .vs/
-
-GlobalElevation/x64/
-
-GlobalElevation/GlobalElevation/x64
+GlobalElevation/Debug/
 
 GlobalElevation/GlobalElevation/Debug/
-GlobalElevation/GlobalElevation/x64/Debug
+
