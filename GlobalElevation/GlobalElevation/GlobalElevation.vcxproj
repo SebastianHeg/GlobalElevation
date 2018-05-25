@@ -70,24 +70,24 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ExecutablePath>Libraries\LibTiff\bin;$(ExecutablePath)</ExecutablePath>
-    <IncludePath>Libraries\LibTiff\include;$(IncludePath)</IncludePath>
-    <LibraryPath>Libraries\LibTiff\lib;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>Libraries\LibTiff\bin;Libraries\GDAL\bin;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>Libraries\LibTiff\include;Libraries\GDAL\include;$(IncludePath)</IncludePath>
+    <LibraryPath>Libraries\LibTiff\lib;Libraries\GDAL\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ExecutablePath>Libraries\LibTiff\bin;$(ExecutablePath)</ExecutablePath>
-    <IncludePath>Libraries\LibTiff\include;$(IncludePath)</IncludePath>
-    <LibraryPath>Libraries\LibTiff\lib;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>Libraries\LibTiff\bin;Libraries\GDAL\bin;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>Libraries\LibTiff\include;Libraries\GDAL\include;$(IncludePath)</IncludePath>
+    <LibraryPath>Libraries\LibTiff\lib;Libraries\GDAL\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ExecutablePath>Libraries\LibTiff\bin;$(ExecutablePath)</ExecutablePath>
-    <IncludePath>Libraries\LibTiff\include;$(IncludePath)</IncludePath>
-    <LibraryPath>Libraries\LibTiff\lib;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>Libraries\LibTiff\bin;Libraries\GDAL\bin;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>Libraries\LibTiff\include;Libraries\GDAL\include;$(IncludePath)</IncludePath>
+    <LibraryPath>Libraries\LibTiff\lib;Libraries\GDAL\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <ExecutablePath>Libraries\LibTiff\bin;$(ExecutablePath)</ExecutablePath>
-    <IncludePath>Libraries\LibTiff\include;$(IncludePath)</IncludePath>
-    <LibraryPath>Libraries\LibTiff\lib;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>Libraries\LibTiff\bin;Libraries\GDAL\bin;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>Libraries\LibTiff\include;Libraries\GDAL\include;$(IncludePath)</IncludePath>
+    <LibraryPath>Libraries\LibTiff\lib;Libraries\GDAL\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -108,7 +108,7 @@
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>libtiff.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libtiff.lib;gdal_i.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -138,15 +138,17 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>libtiff.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libtiff.lib;gdal_i.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="ReadTifFile.cpp" />
+    <ClCompile Include="ReadTifFileGDAL.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ReadTifFile.h" />
+    <ClInclude Include="ReadTifFileGDAL.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

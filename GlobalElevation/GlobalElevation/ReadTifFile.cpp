@@ -35,7 +35,7 @@ void ReadTifFile::importFile(const char* path)
 
 		if(TIFFReadRGBAImage(tif, width, height, raster, 0) == 0)
 		{
-			std::cout << "Can not create raster";
+			std::cout << "Can not create raster" << std::endl;
 		}
 
 		for(int i = 0; i < 100; i++)
@@ -53,6 +53,6 @@ void ReadTifFile::importFile(const char* path)
 		TIFFClose(tif);
 	} else
 	{
-		std::cout << "Can not load File";
+		std::cout << "Can not load File" << std::endl;
 	}
 }

@@ -21,9 +21,15 @@
     <ClCompile Include="ReadTifFile.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="ReadTifFileGDAL.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ReadTifFile.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadTifFileGDAL.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
