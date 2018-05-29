@@ -1,4 +1,4 @@
-#include "ReadTifFile.h"
+//#include "ReadTifFile.h"
 #include "ReadTifFileGDAL.h"
 
 #include <iostream>
@@ -6,7 +6,7 @@
 
 int main()
 {
-	ReadTifFile readTifFile;
+	//ReadTifFile readTifFile;
 	//readTifFile.importFile("Resources\\KanadaHueglig.tif");
 
 	//readTifFile.importFile("Resources\\AfrikaTeilsWasser1.tif");
@@ -15,13 +15,13 @@ int main()
 	//readTifFile.importFile("Resources\\Australien1.tif");
 	//readTifFile.importFile("Resources\\Australien2.tif");
 
-	readTifFile.importFile("Resources\\GebietUmHeidelberg1.tif");
+	//readTifFile.importFile("Resources\\GebietUmHeidelberg1.tif");
 	//readTifFile.importFile("Resources\\GebietUmHeidelberg2.tif");
 	//readTifFile.importFile("Resources\\GebietUmHeidelberg3.tif");
 	//readTifFile.importFile("Resources\\GebietUmHeidelberg4.tif");
 
-	//ReadTifFileGDAL readTifFileGDAL;
-	//readTifFileGDAL.importFile("Resources\\KanadaHueglig.tif");
+	ReadTifFileGDAL readTifFileGDAL;
+	readTifFileGDAL.importFile("Resources\\GebietUmHeidelberg1.tif");
 
 	getchar();
 	return 0;
